@@ -42,8 +42,14 @@ body{background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,
 table{width:100%;border-collapse:collapse;font-size:8pt}
 th,td{border:1px solid var(--line);padding:2px 6px;text-align:left;height:5.4mm}
 th{background:#f5f6f7;font-weight:500}
-.shot{border:1px dashed var(--line);border-radius:5px;flex:1;overflow:hidden}
-.shot img{width:100%;height:100%;object-fit:contain}
+.shot{border:1px dashed var(--line);border-radius:5px;flex:1;min-height:0;min-width:0;position:relative;overflow:hidden}
+.evidence-grid{position:absolute;inset:0;display:grid;gap:3px;grid-template-columns:repeat(var(--columns,1),minmax(0,1fr));grid-template-rows:repeat(var(--rows,1),minmax(0,1fr))}
+.evidence-grid a{position:relative;display:block;min-width:0;min-height:0}
+.shot img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain}
+.evidence-grid.story{grid-template-columns:1fr 2fr;grid-template-rows:1fr 1fr}
+.evidence-grid.story a:first-child{grid-row:1 / 3}
+.evidence-grid.reels{grid-template-columns:1fr 1fr;grid-template-rows:3fr 1fr}
+.evidence-grid.reels a:last-child{grid-column:1 / 3}
 .tag{font-size:7pt;font-weight:700;border-radius:3px;padding:0 4px}
 .tag.real{color:var(--real);background:var(--real-bg)}.tag.assume{color:var(--assume);background:var(--assume-bg)}.tag.none{color:var(--none);background:var(--none-bg)}
 .ft{margin-top:auto;display:flex;justify-content:space-between;font-size:7pt;color:var(--muted);border-top:1px solid var(--line);padding-top:3px}
@@ -71,7 +77,7 @@ th{background:#f5f6f7;font-weight:500}
 </div>
 <div class="row2">
  <div class="box s2"><b>실행</b><div>초기 목표를 인지·이해·관심으로 설정. ‘혼자라서 포기했던 일상, 같이 가능하게’를 중심으로 이야기와 카피의 방향을 통일.</div></div>
- <div class="box s2"><b>증거</b><div class="shot"><img src="img/evidence-01.png" alt=""></div></div>
+ <div class="box s2"><b>증거</b><div class="shot"><div class="evidence-grid" style="--columns:2"><a href="img/evidence-01-1.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-01-1.png" alt=""></a><a href="img/evidence-01-2.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-01-2.png" alt=""></a></div></div></div>
 </div>
 <div class="row3">
  <div class="box s3"><b>결과</b><div>웹드라마를 중심으로 한 초기 마케팅 방향과 핵심 메시지 설정.</div></div>
@@ -89,7 +95,7 @@ th{background:#f5f6f7;font-weight:500}
 </div>
 <div class="row2">
  <div class="box s2"><b>실행</b><div>페르소나와 고객 여정을 바탕으로 택시·식사 에피소드 선정. 비용 부담을 인물의 상황과 대사로 구체화.</div></div>
- <div class="box s2"><b>증거</b><div class="shot"><img src="img/evidence-02.png" alt=""></div></div>
+ <div class="box s2"><b>증거</b><div class="shot"><div class="evidence-grid" style="--columns:2"><a href="img/evidence-02-1.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-02-1.png" alt=""></a><a href="img/evidence-02-2.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-02-2.png" alt=""></a></div></div></div>
 </div>
 <div class="row3">
  <div class="box s3"><b>결과</b><div>고객의 불편을 장면·대사와 서비스 이용 계기로 연결.</div></div>
@@ -107,7 +113,7 @@ th{background:#f5f6f7;font-weight:500}
 </div>
 <div class="row2">
  <div class="box s2"><b>실행</b><div>같은 인물의 생활 문제를 택시 동행에서 식사 동행으로 확장. 회차별 갈등·서비스 등장 이유·다음 편의 궁금증을 구성.</div></div>
- <div class="box s2"><b>증거</b><div class="shot"><img src="img/evidence-03.png" alt=""></div></div>
+ <div class="box s2"><b>증거</b><div class="shot"><div class="evidence-grid story" style="--columns:3"><a href="img/evidence-03-1.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-03-1.png" alt=""></a><a href="img/evidence-03-2.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-03-2.png" alt=""></a><a href="img/evidence-03-3.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-03-3.png" alt=""></a></div></div></div>
 </div>
 <div class="row3">
  <div class="box s3"><b>결과</b><div>에피소드별 독립적인 이야기와 시리즈의 연속성, 브랜드 연결 구조 마련.</div></div>
@@ -125,7 +131,7 @@ th{background:#f5f6f7;font-weight:500}
 </div>
 <div class="row2">
  <div class="box s2"><b>실행</b><div>EP.1 택시 동행, EP.2 식사 동행 제작·편집. 장면의 목적에 맞게 대사와 자막을 배치해 서비스가 필요한 이유를 전달.</div></div>
- <div class="box s2"><b>증거</b><div class="shot"><img src="img/evidence-04.png" alt=""></div></div>
+ <div class="box s2"><b>증거</b><div class="shot"><div class="evidence-grid" style="--columns:5"><a href="img/evidence-04-1.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-04-1.png" alt=""></a><a href="img/evidence-04-2.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-04-2.png" alt=""></a><a href="img/evidence-04-3.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-04-3.png" alt=""></a><a href="img/evidence-04-4.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-04-4.png" alt=""></a><a href="img/evidence-04-5.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-04-5.png" alt=""></a></div></div></div>
 </div>
 <div class="row3">
  <div class="box s3"><b>결과</b><div>기획을 실제 영상으로 구현하고 이야기 흐름과 서비스 설명을 연결.</div></div>
@@ -143,7 +149,7 @@ th{background:#f5f6f7;font-weight:500}
 </div>
 <div class="row2">
  <div class="box s2"><b>실행</b><div>생활 문제를 담은 릴스 제작, 본편 하이라이트 확산안 설계. 첫 문장의 공감과 마지막 안내가 이어지도록 카피 구성.</div></div>
- <div class="box s2"><b>증거</b><div class="shot"><img src="img/evidence-05.png" alt=""></div></div>
+ <div class="box s2"><b>증거</b><div class="shot"><div class="evidence-grid reels" style="--columns:3"><a href="img/evidence-05-1.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-05-1.png" alt=""></a><a href="img/evidence-05-2.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-05-2.png" alt=""></a><a href="img/evidence-05-3.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-05-3.png" alt=""></a></div></div></div>
 </div>
 <div class="row3">
  <div class="box s3"><b>결과</b><div>짧은 영상 제작물과 본편을 활용하는 재가공 방향 마련.</div></div>
@@ -161,7 +167,7 @@ th{background:#f5f6f7;font-weight:500}
 </div>
 <div class="row2">
  <div class="box s2"><b>실행</b><div>매체비 2,000만 원 한도의 모의 배분안 설계<span class="tag assume">가정</span>. 제작비 별도. 채널별로 공감 장면과 시청·구독 안내의 역할을 구분.</div></div>
- <div class="box s2"><b>증거</b><div class="shot"><img src="img/evidence-06.png" alt=""></div></div>
+ <div class="box s2"><b>증거</b><div class="shot"><div class="evidence-grid" style="--columns:1"><a href="img/evidence-06-1.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-06-1.png" alt=""></a></div></div></div>
 </div>
 <div class="row3">
  <div class="box s3"><b>결과</b><div>시청과 구독·팔로우 유도 예산을 나눈 집행안 마련.</div></div>
@@ -179,7 +185,7 @@ th{background:#f5f6f7;font-weight:500}
 </div>
 <div class="row2">
  <div class="box s2"><b>실행</b><div>랜딩페이지 제작, 택시·식사·영화 소재와 연결 정도 점검. 첫 화면의 공감 문구부터 서비스 설명·행동 안내까지 카피 흐름 구성.</div></div>
- <div class="box s2"><b>증거</b><div class="shot"><img src="img/evidence-07.png" alt=""></div></div>
+ <div class="box s2"><b>증거</b><div class="shot"><div class="evidence-grid" style="--columns:3"><a href="img/evidence-07-1.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-07-1.png" alt=""></a><a href="img/evidence-07-2.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-07-2.png" alt=""></a><a href="img/evidence-07-3.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-07-3.png" alt=""></a></div></div></div>
 </div>
 <div class="row3">
  <div class="box s3"><b>결과</b><div>페이지 공개, 식사·영화 연결과 신청 안내의 개선점 도출.</div></div>
@@ -197,7 +203,7 @@ th{background:#f5f6f7;font-weight:500}
 </div>
 <div class="row2">
  <div class="box s2"><b>실행</b><div>GA4 행동 측정 설계와 가상 광고 비교 실습 수행. 향후 첫 문장·장면·버튼 문구를 한 요소씩 비교하는 개선 방향 설정.</div></div>
- <div class="box s2"><b>증거</b><div class="shot"><img src="img/evidence-08.png" alt=""></div></div>
+ <div class="box s2"><b>증거</b><div class="shot"><div class="evidence-grid" style="--columns:2"><a href="img/evidence-08-1.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-08-1.png" alt=""></a><a href="img/evidence-08-2.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-08-2.png" alt=""></a></div></div></div>
 </div>
 <div class="row3">
  <div class="box s3"><b>결과</b><div>측정 항목과 비교 판단 기준 마련.</div></div>
@@ -215,7 +221,7 @@ th{background:#f5f6f7;font-weight:500}
 </div>
 <div class="row2">
  <div class="box s2"><b>실행</b><div>신규·활성·휴면 고객별 안내 시점과 메시지 설계. 이용 목적과 망설임에 맞춰 제목·본문·버튼 문구 구성.</div></div>
- <div class="box s2"><b>증거</b><div class="shot"><img src="img/evidence-09.png" alt=""></div></div>
+ <div class="box s2"><b>증거</b><div class="shot"><div class="evidence-grid" style="--columns:2"><a href="img/evidence-09-1.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-09-1.png" alt=""></a><a href="img/evidence-09-2.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-09-2.png" alt=""></a></div></div></div>
 </div>
 <div class="row3">
  <div class="box s3"><b>결과</b><div>인지 이후 첫 이용·재이용까지의 운영 계획 마련.</div></div>
