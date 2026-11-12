@@ -48,8 +48,11 @@ th{background:#f5f6f7;font-weight:500}
 .shot img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain}
 .evidence-grid.story{grid-template-columns:1fr 2fr;grid-template-rows:1fr 1fr}
 .evidence-grid.story a:first-child{grid-row:1 / 3}
-.evidence-grid.reels{grid-template-columns:1fr 1fr;grid-template-rows:3fr 1fr}
-.evidence-grid.reels a:last-child{grid-column:1 / 3}
+.row2.reels-row{grid-template-columns:1fr 2fr}
+.evidence-grid.reels{gap:0;grid-template-columns:640fr 641fr 2299fr;grid-template-rows:minmax(0,1fr)}
+.evidence-grid.reels a:last-child{margin-left:6px}
+.evidence-grid.reels a:first-child img{object-position:right center}
+.evidence-grid.reels a:nth-child(2) img{object-position:left center}
 .tag{font-size:7pt;font-weight:700;border-radius:3px;padding:0 4px}
 .tag.real{color:var(--real);background:var(--real-bg)}.tag.assume{color:var(--assume);background:var(--assume-bg)}.tag.none{color:var(--none);background:var(--none-bg)}
 .ft{margin-top:auto;display:flex;justify-content:space-between;font-size:7pt;color:var(--muted);border-top:1px solid var(--line);padding-top:3px}
@@ -147,7 +150,7 @@ th{background:#f5f6f7;font-weight:500}
  <div class="box s1"><b>개선 목표</b><div>공감·반전 장면으로 관심을 끌고 본편을 볼 이유 전달.</div></div>
  <div class="box s1"><b>가설</b><div>짧은 장면에서 생긴 궁금증이 본편 탐색으로 이어질 것이다.</div></div>
 </div>
-<div class="row2">
+<div class="row2 reels-row">
  <div class="box s2"><b>실행</b><div>생활 문제를 담은 릴스 제작, 본편 하이라이트 확산안 설계. 첫 문장의 공감과 마지막 안내가 이어지도록 카피 구성.</div></div>
  <div class="box s2"><b>증거</b><div class="shot"><div class="evidence-grid reels" style="--columns:3"><a href="img/evidence-05-1.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-05-1.png" alt=""></a><a href="img/evidence-05-2.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-05-2.png" alt=""></a><a href="img/evidence-05-3.png" target="_blank" rel="noopener" aria-label="증거 이미지 원본 보기"><img src="img/evidence-05-3.png" alt=""></a></div></div></div>
 </div>
